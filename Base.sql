@@ -8,7 +8,7 @@ INSERT INTO Zonas (Zona) VALUES ('ZONA CENTRAL'),('ZONA OCCIDENTAL'),('ZONA ORIE
 
 create table Departamentos (
 IdDepartamento int primary key  identity ,
-Departamento nvarchar(150) not null
+Departamento nvarchar(550) not null
 );
 INSERT INTO Departamentos (Departamento) VALUES ('AHUACHAPÁN'),('CABAÑAS'),('CHALATENANGO'),('CUSCATLÁN'),('LA LIBERTAD'),('LA PAZ')
 ,('LA UNIÓN'),('MORAZÁN'),('SAN MIGUEL'),('SAN SALVADOR'),('SAN VICENTE'),('SANTA ANA')
@@ -31,11 +31,12 @@ RegularAuto	float default null,
 DieselAuto	float default null,
 IonDieselAuto	float default null,
 DieselLSAuto float default null,
-Latitud DECIMAL(9, 6),
-Longitud DECIMAL(9, 6),
+Latitud DECIMAL(18, 14),
+Longitud DECIMAL(18, 14),
 CalificacionPromedio DECIMAL(5,2),
 Fecha_Creacion Datetime Default GETDATE() 
 );
+
 
 create table Calificaciones (
 IdCalificacion int primary key  identity ,
